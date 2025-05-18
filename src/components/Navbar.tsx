@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <img
-              src="/tapnet-logo.png"
+              src="/lovable-uploads/00a699d0-0a4c-47fc-be5c-9908b209500a.png"
               alt="Tapnet Logo"
               className="h-10 w-auto"
             />
