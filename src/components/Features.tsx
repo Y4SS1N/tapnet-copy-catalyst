@@ -1,158 +1,103 @@
 
 import React from "react";
-import { Check } from "lucide-react";
+import { Check, BarChart, Users, Calendar, MessageSquare, FileText, Target, Zap } from "lucide-react";
 
 const Features = () => {
+  const features = [
+    {
+      icon: Target,
+      title: "Visual Deal Pipeline",
+      description: "See exactly where every deal stands with drag-and-drop pipeline management",
+      highlight: "Track $450k+ deals instantly"
+    },
+    {
+      icon: Users,
+      title: "Contact & Account Management",
+      description: "Complete customer profiles with interaction history and deal associations",
+      highlight: "Never lose a lead again"
+    },
+    {
+      icon: Calendar,
+      title: "Smart Scheduling",
+      description: "Automated follow-ups and meeting scheduling with Google Calendar sync",
+      highlight: "3x faster booking"
+    },
+    {
+      icon: MessageSquare,
+      title: "Communication Hub",
+      description: "All conversations in one place - email, WhatsApp, calls, and notes",
+      highlight: "Zero missed messages"
+    },
+    {
+      icon: FileText,
+      title: "Quote & Proposal Builder",
+      description: "Professional quotes and proposals with your branding in minutes",
+      highlight: "Close deals 50% faster"
+    },
+    {
+      icon: BarChart,
+      title: "Analytics & Tracking",
+      description: "Real-time insights on deal flow, conversion rates, and revenue forecasting",
+      highlight: "Data-driven decisions"
+    },
+    {
+      icon: Zap,
+      title: "Task Automation",
+      description: "Automated workflows, scoring rules, and intelligent follow-up sequences",
+      highlight: "Save 10+ hours/week"
+    },
+    {
+      icon: Check,
+      title: "Team Collaboration",
+      description: "Assign deals, share notes, and collaborate seamlessly across your team",
+      highlight: "Perfect team sync"
+    }
+  ];
+
   return (
-    <div id="features" className="py-16 bg-white">
+    <div className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            All-in-One CRM Solution to Scale Your Marketing Agency
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            ⚡ Powerful Features
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+            Everything You Need to <span className="text-blue-600">Win More Deals</span>
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            Stop losing money with disconnected tools. Get everything you need in one platform.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Built for startups who need results, not complexity. Every feature designed to make you faster and smarter.
           </p>
         </div>
 
-        <div className="mt-16">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-            <div className="mb-12 lg:mb-0">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Client & Contact Management
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Never lose a lead again</strong> with our centralized contact database
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Track all interactions</strong> from first touch to closed deal
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Custom fields</strong> tailored to your agency's specific needs
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div className="mb-12 lg:mb-0">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Project & Task Management
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Handle unlimited projects</strong> with custom workflows
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Assign tasks</strong> to team members with deadlines and priorities
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Real-time progress tracking</strong> for transparent client communication
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div key={index} className="group bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all duration-300">
+                <div className="bg-blue-50 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+                  <IconComponent className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm mb-3 leading-relaxed">{feature.description}</p>
+                <div className="inline-flex items-center text-blue-600 text-xs font-medium bg-blue-50 px-3 py-1 rounded-full">
+                  {feature.highlight}
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-          <div className="mt-16 lg:grid lg:grid-cols-2 lg:gap-16">
-            <div className="mb-12 lg:mb-0">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Communication Hub
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Centralize all client communications</strong> - email, chat, calls in one place
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Automated follow-ups</strong> that close more deals without the work
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Templates library</strong> for consistent, professional messaging
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Advanced Reporting
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Real-time agency dashboard</strong> for key performance metrics
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Custom report builder</strong> with white-labeled client reports
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Check className="h-6 w-6 text-green-500" />
-                  </div>
-                  <p className="ml-3 text-lg text-gray-700">
-                    <strong>Revenue forecasting</strong> to predict and optimize your cash flow
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center">
-            <img
-              className="mx-auto rounded-lg shadow-xl"
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
-              alt="Tapnet Dashboard"
-            />
-          </div>
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-white text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to See It in Action?
+          </h3>
+          <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+            Join 10,000+ startups already using our CRM to close more deals and grow faster.
+          </p>
+          <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors inline-flex items-center">
+            Start Free Trial
+            <span className="ml-2">→</span>
+          </button>
         </div>
       </div>
     </div>
