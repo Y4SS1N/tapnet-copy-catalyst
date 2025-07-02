@@ -28,30 +28,30 @@ const startupTestimonials = [
 
 const StartupTestimonials = () => {
   return (
-    <div className="py-24 bg-blue-50">
+    <div className="py-16 sm:py-20 lg:py-24 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 sm:mb-6">
             Proof <span className="text-blue-600">(Trust Builders)</span>
           </h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {startupTestimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100">
-              <div className="flex items-center mb-6">
+            <div key={testimonial.id} className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-100">
+              <div className="flex items-center mb-4 sm:mb-6">
                 <img
-                  className="h-16 w-16 rounded-full object-cover mr-4 border-2 border-blue-200"
+                  className="h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover mr-3 sm:mr-4 border-2 border-blue-200 flex-shrink-0"
                   src={testimonial.avatar}
                   alt={testimonial.author}
                 />
-                <div>
-                  <div className="font-bold text-gray-900 text-lg">💬 {testimonial.author}</div>
-                  <div className="text-blue-600 font-medium">{testimonial.title}</div>
+                <div className="min-w-0">
+                  <div className="font-bold text-gray-900 text-base sm:text-lg">💬 {testimonial.author}</div>
+                  <div className="text-blue-600 font-medium text-sm sm:text-base truncate">{testimonial.title}</div>
                 </div>
               </div>
-              <Separator className="my-6 bg-blue-200" />
-              <p className="text-gray-700 text-lg italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
+              <Separator className="my-4 sm:my-6 bg-blue-200" />
+              <p className="text-gray-700 text-base sm:text-lg italic leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
             </div>
           ))}
         </div>
