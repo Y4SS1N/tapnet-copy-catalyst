@@ -5,52 +5,41 @@ import { Check } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="relative bg-gradient-to-b from-blue-600 to-blue-700 py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">Still Running Your Startup</span>
-              <span className="block text-blue-200">on Chaos and Hope?</span>
-            </h1>
-            <h2 className="mt-4 text-2xl font-bold text-white">
-              Here's the CRM That Fixes It—Fast.
-            </h2>
-            <p className="mt-6 text-xl leading-8 text-blue-100 font-medium">
-              We built the simplest, most ruthless CRM for early-stage startups. No fluff. No learning curve. Just pure speed, visibility, and deal flow.
-            </p>
-            <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div className="rounded-md shadow">
-                <Button className="w-full flex items-center justify-center px-8 py-6 text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 md:py-6 md:text-lg md:px-10">
-                  👉 Start Your Free Trial – No Card Required
-                </Button>
-              </div>
-            </div>
-            <div className="mt-6 flex items-center justify-center lg:justify-start space-x-4 text-sm text-blue-100">
-              <div className="flex items-center">
-                <Check className="h-5 w-5 text-blue-300 mr-1" />
-                <span>No Credit Card Required</span>
-              </div>
-              <div className="flex items-center">
-                <Check className="h-5 w-5 text-blue-300 mr-1" />
-                <span>Setup in Minutes</span>
-              </div>
-            </div>
+    <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 min-h-screen flex items-center">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-blue-300/10 rounded-full blur-xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            <span className="block">Still Running Your Startup</span>
+            <span className="block text-blue-200">on Chaos and Hope?</span>
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-100 mb-8">
+            Here's the CRM That Fixes It—Fast.
+          </h2>
+          <p className="text-xl md:text-2xl leading-relaxed text-blue-100 font-medium mb-12 max-w-3xl mx-auto">
+            We built the simplest, most ruthless CRM for early-stage startups. No fluff. No learning curve. Just pure speed, visibility, and deal flow.
+          </p>
+          
+          <div className="mb-8">
+            <Button className="text-lg md:text-xl font-bold px-12 py-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200">
+              👉 Start Your Free Trial – No Card Required
+            </Button>
           </div>
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-              <div className="relative block w-full bg-white rounded-lg overflow-hidden">
-                <img
-                  className="w-full"
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
-                  alt="Tapnet CRM Dashboard"
-                />
-                <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-                  <Button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-                    Watch Demo
-                  </Button>
-                </div>
-              </div>
+          
+          <div className="flex items-center justify-center space-x-8 text-blue-200">
+            <div className="flex items-center">
+              <Check className="h-5 w-5 text-green-400 mr-2" />
+              <span className="text-lg">No Credit Card Required</span>
+            </div>
+            <div className="flex items-center">
+              <Check className="h-5 w-5 text-green-400 mr-2" />
+              <span className="text-lg">Setup in Minutes</span>
             </div>
           </div>
         </div>

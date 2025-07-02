@@ -4,32 +4,44 @@ import { Button } from "@/components/ui/button";
 
 const ZeroRiskCta = () => {
   return (
-    <div className="bg-blue-600">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-48 h-48 bg-blue-300/10 rounded-full blur-xl"></div>
+      </div>
+      
+      <div className="relative max-w-6xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12">
             Zero-Risk Trial
           </h2>
           
-          <div className="space-y-2 mb-8 text-xl text-blue-100">
-            <p>No contracts.</p>
-            <p>No commitments.</p>
-            <p>No credit card.</p>
+          <div className="grid md:grid-cols-3 gap-8 mb-12 text-2xl text-blue-100">
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <p className="font-bold">No contracts.</p>
+            </div>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <p className="font-bold">No commitments.</p>
+            </div>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <p className="font-bold">No credit card.</p>
+            </div>
           </div>
           
-          <div className="space-y-2 mb-8 text-lg text-blue-100">
-            <p>Sign up.</p>
-            <p>Plug it in.</p>
+          <div className="mb-12 text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="mb-2">Sign up.</p>
+            <p className="mb-2">Plug it in.</p>
             <p>If it doesn't help you win—just bounce. No hard feelings.</p>
           </div>
 
-          <div className="flex justify-center mb-6">
-            <Button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50">
+          <div className="mb-8">
+            <Button className="text-xl font-bold px-12 py-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200">
               🔥 Get Your Free Trial – Start Now
             </Button>
           </div>
           
-          <p className="text-xl font-bold text-blue-200">
+          <p className="text-2xl font-bold text-blue-200">
             This is what startup momentum feels like.
           </p>
         </div>
