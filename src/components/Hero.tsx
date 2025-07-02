@@ -10,16 +10,19 @@ const Hero = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">The ONLY CRM Solution</span>
-              <span className="block text-blue-200">Marketing Agencies Actually Need</span>
+              <span className="block">Still Running Your Startup</span>
+              <span className="block text-blue-200">on Chaos and Hope?</span>
             </h1>
+            <h2 className="mt-4 text-2xl font-bold text-white">
+              Here's the CRM That Fixes It—Fast.
+            </h2>
             <p className="mt-6 text-xl leading-8 text-blue-100 font-medium">
-              Why use 6 different tools when ONE does it all? Tapnet is the all-in-one CRM platform that eliminates wasted time, creates more profit, and helps you scale your agency without the headache.
+              We built the simplest, most ruthless CRM for early-stage startups. No fluff. No learning curve. Just pure speed, visibility, and deal flow.
             </p>
             <div className="mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <Button className="w-full flex items-center justify-center px-8 py-6 text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 md:py-6 md:text-lg md:px-10">
-                  Get Started Free For 14 Days
+                  👉 Start Your Free Trial – No Card Required
                 </Button>
               </div>
             </div>
@@ -30,7 +33,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center">
                 <Check className="h-5 w-5 text-blue-300 mr-1" />
-                <span>Free For 14 Days</span>
+                <span>Setup in Minutes</span>
               </div>
             </div>
           </div>

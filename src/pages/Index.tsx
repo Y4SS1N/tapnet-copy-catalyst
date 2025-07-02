@@ -3,11 +3,13 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
-import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
+import WhyYoureHere from "@/components/WhyYoureHere";
+import BuiltDifferent from "@/components/BuiltDifferent";
+import WhatItReplaces from "@/components/WhatItReplaces";
+import StartupTestimonials from "@/components/StartupTestimonials";
 import Integration from "@/components/Integration";
 import Pricing from "@/components/Pricing";
-import Cta from "@/components/Cta";
+import ZeroRiskCta from "@/components/ZeroRiskCta";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,11 +18,13 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Stats />
-      <Features />
+      <WhyYoureHere />
+      <BuiltDifferent />
+      <WhatItReplaces />
+      <StartupTestimonials />
       <Integration />
-      <Testimonials />
       <Pricing />
-      <Cta />
+      <ZeroRiskCta />
       <Footer />
     </div>
   );
