@@ -6,10 +6,13 @@ import { Check } from "lucide-react";
 const PricingTier = ({
   name,
   price,
+  originalPrice,
+  period,
   description,
   features,
   highlighted = false,
   buttonText = "Get Started",
+  limitedOffer = false,
 }) => {
   return (
     <div
@@ -26,8 +29,14 @@ const PricingTier = ({
         <h3 className="text-2xl font-bold text-gray-900">{name}</h3>
         <div className="mt-4 flex items-baseline">
           <span className="text-5xl font-extrabold tracking-tight text-gray-900">${price}</span>
-          <span className="ml-1 text-xl font-medium text-gray-500">/month</span>
+          {originalPrice && (
+            <span className="ml-2 text-2xl font-medium text-red-500 line-through">${originalPrice}</span>
+          )}
+          {period && <span className="ml-1 text-xl font-medium text-gray-500">/{period}</span>}
         </div>
+        {limitedOffer && (
+          <p className="mt-2 text-sm text-red-600 font-medium">Limited time offer!</p>
+        )}
         <p className="mt-5 text-lg text-gray-500">{description}</p>
         <Button
           className={`mt-8 w-full py-6 ${
@@ -71,28 +80,47 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+        <div className="mt-12 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-8">
           <PricingTier
-            name="Startup"
-            price="99"
-            description="Perfect for new agencies just getting their systems in place."
+            name="Founders"
+            price="0"
+            originalPrice="99"
+            description="Limited time offer!"
             features={[
-              "Up to 5 team members",
-              "500 contacts",
+              "1 Team Member",
+              "250 contacts",
               "Unlimited projects",
               "Email integration",
               "Basic reporting",
               "5 custom workflows",
               "Standard support"
             ]}
-            buttonText="Start Your Free Trial"
+            buttonText="Start For Free"
+            limitedOffer={true}
+          />
+          <PricingTier
+            name="Startup"
+            price="199"
+            period="year"
+            description="For startups just getting their systems in place."
+            features={[
+              "5 Team Members",
+              "1000 contacts",
+              "Unlimited projects",
+              "Email integration",
+              "Basic reporting",
+              "5 custom workflows",
+              "Standard support"
+            ]}
+            buttonText="Get Started Here"
           />
           <PricingTier
             name="Growth"
-            price="249"
-            description="For established agencies ready to scale operations and profitability."
+            price="499"
+            period="year"
+            description="For established startups ready to scale."
             features={[
-              "Up to 15 team members",
+              "15 Team Members",
               "10,000 contacts",
               "Unlimited projects",
               "Email & SMS integration",
@@ -102,25 +130,25 @@ const Pricing = () => {
               "White labeling"
             ]}
             highlighted={true}
-            buttonText="Start Your Free Trial"
+            buttonText="Most Popular Plan"
           />
           <PricingTier
-            name="Agency"
-            price="599"
-            description="Enterprise-grade features for large or multi-location agencies."
+            name="Enterprise"
+            price="999"
+            period="year"
+            description="Enterprise-grade features for large enterprise or multi-location."
             features={[
-              "Unlimited team members",
+              "Unlimited Team",
               "Unlimited contacts",
               "Unlimited projects",
               "All integrations",
               "Custom reporting",
-              "Unlimited workflows",
               "24/7 premium support",
               "White labeling",
               "API access",
               "Dedicated success manager"
             ]}
-            buttonText="Contact Sales"
+            buttonText="Get Started Now"
           />
         </div>
       </div>
